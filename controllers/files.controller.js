@@ -9,10 +9,8 @@ exports.uploadFile = (req, res) => {
 };
 
 exports.processExcel = async (req, res) => {
-  console.log("File received:", req.file);
 
   const rows = parseExcel(req.file.path);
-  console.log("Parsed Excel rows:", rows);
 
   let inserted = 0;
   let skipped = 0;
